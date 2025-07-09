@@ -149,6 +149,6 @@ echo "======= Export Done ======"
 
 # Start building
 source build/envsetup.sh
-lunch lineage_a04e-ap4a-userdebug
+lunch lineage_a04e-ap4a-userdebug || brunch a04e
 mka bacon
 
