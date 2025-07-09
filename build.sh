@@ -2,6 +2,7 @@
 
 echo "Building Started"
 rm -rf device/samung/a04e
+rm -rf device/samsung/mt6765-jdm
 rm -rf kernel/samsung/a04e
 rm -rf vendor/samsung/lpm-p35
 rm -rf hardware/samsung
