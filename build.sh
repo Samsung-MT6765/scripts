@@ -18,6 +18,7 @@ echo "========================================================================="
 git clone https://github.com/ZxroxXm/android_device_samsung_a04e -b fifteen device/samsung/a04e
 git clone https://github.com/ZxroxXm/android_device_samsung_mt6765-jdm -b fifteen device/samsung/mt6765-jdm
 git clone https://github.com/ZxroxXm/vendor_samsung_hq-camera -b fifteen vendor/samsung/hq-camera
+git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b  fifteen kernel/samsung/a04e
 git clone https://github.com/ZxroxXm/vendor_samsung_lpm-p35 -b fifteen vendor/samsung/lpm-p35
 git clone https://github.com/ZxroxXm/android_hardware_samsung -b fifteen hardware/samsung
 git clone https://github.com/ZxroxXm/android_device_mediatek_sepolicy_vndr -b fifteen device/mediatek/sepolicy_vndr
