@@ -30,10 +30,7 @@ echo "==========================================================================
 /opt/crave/resync.sh
 echo "============= Repo Sync Done =============="
 
-# Selinux Patches
-#!/bin/bash
-
-#selinux patch
+# Selinux Patch
 
 echo "------------------------------------------------"
 echo " We dont need selinux from Ram boost,iso,udf,aux "
