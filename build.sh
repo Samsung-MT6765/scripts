@@ -152,8 +152,15 @@ source build/envsetup.sh
 lunch lineage_a04e-ap2a-userdebug
 mka bacon
 
+cd out/target/product/a04e
+wget https://raw.githubusercontent.com/Yamotadian/uploader/refs/heads/main/upload.sh
+bash upload.sh *.zip
+rm -rf upload.sh
+cd ../../../..
+
 rm -rf vendor/samsung/a04e
 git clone https://github.com/Yamotadian/android_vendor_samsung_a04e vendor/samsung/a04e
 source build/envsetup.sh
 lunch lineage_a04e-ap2a-userdebug
 mka bacon
+
