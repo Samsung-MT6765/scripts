@@ -19,8 +19,8 @@ echo "========================================================================="
 git clone https://github.com/ZxroxXm/device_samsung_a04e -b lineage-21 device/samsung/a04e
 git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
 git clone https://github.com/ZxroxXm/vendor_samsung_hq-camera -b lineage-21 vendor/samsung/hq-camera
-git clone https://codeberg.org/samsung-mt6765/android_kernel_samsung_a04e -b lineage-21 kernel/samsung/a04e
-git clone https://codeberg.org/samsung-mt6765/android_device_samsung_ceres-kernel -b lineage-21 device/samsung/a04e-kernel
+git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b lineage-21 kernel/samsung/a04e
+git clone https://github.com/ZxroxXm/device_samsung_a04e-kernel -b lineage-21 device/samsung/a04e-kernel
 git clone https://github.com/ZxroxXm/android_hardware_samsung -b lineage-21 hardware/samsung
 git clone https://github.com/ZxroxXm/android_device_mediatek_sepolicy_vndr -b lineage-21 device/mediatek/sepolicy_vndr
 echo "============================================================================================="
