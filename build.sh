@@ -4,6 +4,7 @@ echo "Building Started"
 rm -rf device/samung/a04e
 rm -rf kernel/samsung/a04e
 rm -rf vendor/samsung/a04e
+rm -rf device/samsung/a04e-kernel
 rm -rf vendor/samsung/hq-camera
 rm -rf hardware/samsung
 rm -rf device/mediatek/sepolicy_vndr
