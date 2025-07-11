@@ -2,27 +2,26 @@
 
 echo "Building Started"
 rm -rf device/samung/a04e
-rm -rf device/samsung/mt6765-jdm
 rm -rf kernel/samsung/a04e
-rm -rf vendor/samsung/lpm-p35
-rm -rf hardware/samsung
+rm -rf vendor/samsung/a04e
 rm -rf vendor/samsung/hq-camera
+rm -rf hardware/samsung
 rm -rf device/mediatek/sepolicy_vndr
+rm -rf prebuilts/clang/host/linux-x86
 
 # Rom source repo
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 echo "========================================================================="
 echo "----------------------------- Repo init success ---------------------------"
 echo "========================================================================="
 
 # Device Specific trees
-git clone https://github.com/ZxroxXm/android_device_samsung_a04e -b fifteen device/samsung/a04e
-git clone https://github.com/ZxroxXm/android_device_samsung_mt6765-jdm -b fifteen device/samsung/mt6765-jdm
-git clone https://github.com/ZxroxXm/vendor_samsung_hq-camera -b fifteen vendor/samsung/hq-camera
-git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b  fifteen kernel/samsung/a04e
-git clone https://github.com/ZxroxXm/vendor_samsung_lpm-p35 -b fifteen vendor/samsung/lpm-p35
-git clone https://github.com/ZxroxXm/android_hardware_samsung -b fifteen hardware/samsung
-git clone https://github.com/ZxroxXm/android_device_mediatek_sepolicy_vndr -b fifteen device/mediatek/sepolicy_vndr
+git clone https://github.com/ZxroxXm/device_samsung_a04e -b lineage-21 device/samsung/a04e
+git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
+git clone https://github.com/ZxroxXm/vendor_samsung_hq-camera -b lineage-21 vendor/samsung/hq-camera
+git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b lineage-21 kernel/samsung/a04e
+git clone https://github.com/ZxroxXm/android_hardware_samsung -b lineage-21 hardware/samsung
+git clone https://github.com/ZxroxXm/android_device_mediatek_sepolicy_vndr -b lineage-21 device/mediatek/sepolicy_vndr
 echo "============================================================================================="
 echo "--------------------- All Repositrories Cloned Successfully -------------------"
 echo "============================================================================================="
@@ -148,6 +147,6 @@ echo "======= Export Done ======"
 
 # Start building
 source build/envsetup.sh
-lunch lineage_a04e-ap4a-userdebug || brunch a04e
+lunch lineage_a04e-ap2a-userdebug
 mka bacon
 
