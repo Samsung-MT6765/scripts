@@ -157,9 +157,3 @@ git clone https://github.com/Yamotadian/android_vendor_samsung_a04e vendor/samsu
 source build/envsetup.sh
 lunch lineage_a04e-ap2a-userdebug
 mka bacon
-
-rm -rf device/samung/a04e
-git clone https://github.com/ZxroxXm/device_samsung_a04e -b lineage-21 device/samsung/a04e
-source build/envsetup.sh
-lunch lineage_a04e-ap2a-userdebug
-mka bacon
