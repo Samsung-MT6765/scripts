@@ -7,6 +7,7 @@ rm -rf vendor/samsung/a04e
 rm -rf device/samsung/a04e-kernel
 rm -rf vendor/samsung/hq-camera
 rm -rf hardware/samsung
+rm -rf hardware/mediatek
 rm -rf device/mediatek/sepolicy_vndr
 rm -rf prebuilts/clang/host/linux-x86
 
@@ -19,10 +20,10 @@ echo "========================================================================="
 # Device Specific trees
 git clone https://github.com/ZxroxXm/device_samsung_a04e -b lineage-21 device/samsung/a04e
 git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
-git clone https://github.com/ZxroxXm/vendor_samsung_hq-camera -b lineage-21 vendor/samsung/hq-camera
 git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b lineage-21 kernel/samsung/a04e
 git clone https://github.com/ZxroxXm/device_samsung_a04e-kernel -b lineage-21 device/samsung/a04e-kernel
 git clone https://github.com/ZxroxXm/android_hardware_samsung -b lineage-21 hardware/samsung
+git clone https://github.com/ZxroxXm/android_hardware_mediatek -b lineage-21 hardware/mediatek
 git clone https://github.com/ZxroxXm/android_device_mediatek_sepolicy_vndr -b lineage-21 device/mediatek/sepolicy_vndr
 echo "============================================================================================="
 echo "--------------------- All Repositrories Cloned Successfully -------------------"
