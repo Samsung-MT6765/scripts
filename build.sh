@@ -11,19 +11,19 @@ rm -rf device/mediatek/sepolicy_vndr
 rm -rf prebuilts/clang/host/linux-x86
 
 # Rom source repo
-repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
 echo "========================================================================="
 echo "----------------------------- Repo init success ---------------------------"
 echo "========================================================================="
 
 # Device Specific trees
-git clone https://github.com/ZxroxXm/device_samsung_a04e -b lineage-21 device/samsung/a04e
-git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
-git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b lineage-21 kernel/samsung/a04e
-git clone https://github.com/ZxroxXm/device_samsung_a04e-kernel -b lineage-21 device/samsung/a04e-kernel
-git clone https://github.com/ZxroxXm/android_hardware_samsung -b lineage-21 hardware/samsung
-git clone https://github.com/ZxroxXm/android_hardware_mediatek -b lineage-21 hardware/mediatek
-git clone https://github.com/ZxroxXm/android_device_mediatek_sepolicy_vndr -b lineage-21 device/mediatek/sepolicy_vndr
+git clone https://github.com/ZxroxXm/device_samsung_a04e -b lineage-22.2 device/samsung/a04e
+git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-22.2 vendor/samsung/a04e
+git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b lineage-22.2 kernel/samsung/a04e
+git clone https://github.com/ZxroxXm/device_samsung_a04e-kernel -b lineage-22.2 device/samsung/a04e-kernel
+git clone https://github.com/ZxroxXm/android_hardware_samsung -b lineage-22.2 hardware/samsung
+git clone https://github.com/ZxroxXm/android_hardware_mediatek -b lineage-22.2 hardware/mediatek
+git clone https://github.com/ZxroxXm/android_device_mediatek_sepolicy_vndr -b lineage-22.2 device/mediatek/sepolicy_vndr
 echo "============================================================================================="
 echo "--------------------- All Repositrories Cloned Successfully -------------------"
 echo "============================================================================================="
@@ -108,49 +108,20 @@ wget https://raw.githubusercontent.com/ZxroxXm/patches/refs/heads/main/frame-2-1
 wget https://raw.githubusercontent.com/ZxroxXm/patches/refs/heads/main/proc.patch
 wget https://raw.githubusercontent.com/ZxroxXm/patches/refs/heads/main/sms-15.patch
 
-git apply bt-15-qpr1.patch
-echo "------------------------------------------------"
-echo " bt-15-qpr1 patch "
-echo "------------------------------------------------"
-
+git apply bt-15-qpr1.patch 
 git apply frame-1-15.patch
-echo "------------------------------------------------"
-echo " frame-1-15.patch "
-echo "------------------------------------------------"
-
 git apply frame-2-15.patch
-echo "------------------------------------------------"
-echo " frame-2-15.patch "
-echo "------------------------------------------------"
-
 git apply proc.patch
-echo "------------------------------------------------"
-echo " proc.patch "
-echo "------------------------------------------------"
-
 git apply sms-15.patch
-echo "------------------------------------------------"
-echo " sms-15.patch "
-echo "------------------------------------------------"
-
-echo "------------------------------------------------"
-echo "=========ALL PATCHES DONE SUCCESFULLY==========="
-echo "------------------------------------------------"
 
 # Must remove this else cause conflicts
 rm -rf build/soong/fsgen
 
-# Export
+# Build
 export BUILD_USERNAME=ZxroxXm
 export BUILD_HOSTNAME=crave
 export TZ=Asia/India
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
-echo "======= Export Done ======"
-
-rm -rf hardware/interfaces
-rm -rf vendor/samsung/a04e
-git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
-/opt/crave/resync.sh
 source build/envsetup.sh
-lunch lineage_a04e-ap2a-userdebug
+lunch lineage_a04e-bp1a-userdebug
 mka bacon
