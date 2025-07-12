@@ -9,7 +9,6 @@ rm -rf hardware/samsung
 rm -rf hardware/mediatek
 rm -rf device/mediatek/sepolicy_vndr
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf hardware/libhardware_legacy
 
 # Rom source repo
 repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
@@ -117,8 +116,6 @@ git apply sms-15.patch
 
 # IMP
 rm -rf build/soong/fsgen
-rm -rf hardware/libhardware_legacy
-git clone https://github.com/LineageOS/android_hardware_libhardware_legacy hardware/libhardware_legacy
 
 # Build
 export BUILD_USERNAME=ZxroxXm
