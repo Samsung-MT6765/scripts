@@ -156,6 +156,7 @@ cd out/target/product/a04e
 wget https://raw.githubusercontent.com/Yamotadian/uploader/refs/heads/main/upload.sh
 bash upload.sh *.zip
 rm -rf upload.sh
+rm -rf *.zip
 cd ../../../..
 
 rm -rf vendor/samsung/a04e
