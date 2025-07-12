@@ -172,3 +172,12 @@ git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/sa
 source build/envsetup.sh
 lunch lineage_a04e-ap2a-userdebug
 mka bacon
+
+rm -rf hardware/interfaces
+
+rm -rf vendor/samsung/a04e
+git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
+/opt/crave/resync.sh
+source build/envsetup.sh
+lunch lineage_a04e-ap2a-userdebug
+mka bacon
