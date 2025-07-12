@@ -165,3 +165,10 @@ source build/envsetup.sh
 lunch lineage_a04e-ap2a-userdebug
 mka bacon
 
+rm -rf hardware_legacy
+/opt/crave/resync.sh
+rm -rf vendor/samsung/a04e
+git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
+source build/envsetup.sh
+lunch lineage_a04e-ap2a-userdebug
+mka bacon
