@@ -147,34 +147,7 @@ export TZ=Asia/India
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 echo "======= Export Done ======"
 
-# Start building
-source build/envsetup.sh
-lunch lineage_a04e-ap2a-userdebug
-mka bacon
-
-cd out/target/product/a04e
-wget https://raw.githubusercontent.com/Yamotadian/uploader/refs/heads/main/upload.sh
-bash upload.sh *.zip
-rm -rf upload.sh
-rm -rf *.zip
-cd ../../../..
-
-rm -rf vendor/samsung/a04e
-git clone https://github.com/Yamotadian/android_vendor_samsung_a04e vendor/samsung/a04e
-source build/envsetup.sh
-lunch lineage_a04e-ap2a-userdebug
-mka bacon
-
-rm -rf hardware_legacy
-rm -rf vendor/samsung/a04e
-git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
-/opt/crave/resync.sh
-source build/envsetup.sh
-lunch lineage_a04e-ap2a-userdebug
-mka bacon
-
 rm -rf hardware/interfaces
-
 rm -rf vendor/samsung/a04e
 git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-21 vendor/samsung/a04e
 /opt/crave/resync.sh
