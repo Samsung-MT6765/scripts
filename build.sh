@@ -125,3 +125,11 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 lunch lineage_a04e-bp1a-userdebug
 mka bacon
+
+# Making Recovery Image
+rm -rf device/samsung/a04e
+git clone https://github.com/xcitty2029x/twrp_device_samsung_a04e device/samsung/a04e
+/opt/crave/resync.sh
+source build/envsetup.sh
+breakfast a04e userdebug || breakfast a04e || lunch twrp_a04e-eng
+mka recoveryimage
