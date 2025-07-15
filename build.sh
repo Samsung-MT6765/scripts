@@ -131,5 +131,5 @@ rm -rf device/samsung/a04e
 git clone https://github.com/xcitty2029x/twrp_device_samsung_a04e device/samsung/a04e
 /opt/crave/resync.sh
 source build/envsetup.sh
-breakfast a04e userdebug || breakfast a04e || lunch twrp_a04e-eng
+breakfast a04e userdebug || breakfast a04e || lunch lineage_a04e-eng || lunch lineage_a04e-userdebug
 mka recoveryimage
