@@ -21,9 +21,9 @@ git clone https://github.com/ZxroxXm/device_samsung_a04e -b lineage-22.2 device/
 git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-22.2 vendor/samsung/a04e
 git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b lineage-22.2 kernel/samsung/a04e
 git clone https://github.com/ZxroxXm/device_samsung_a04e-kernel -b lineage-22.2 device/samsung/a04e-kernel
-git clone https://github.com/ZxroxXm/android_hardware_samsung -b lineage-22.2 hardware/samsung
-git clone https://github.com/ZxroxXm/android_hardware_mediatek -b lineage-22.2 hardware/mediatek
-git clone https://github.com/ZxroxXm/android_device_mediatek_sepolicy_vndr -b lineage-22.2 device/mediatek/sepolicy_vndr
+git clone https://github.com/LineageOS/android_hardware_samsung -b lineage-22.2 hardware/samsung
+git clone https://github.com/LineageOS/android_hardware_mediatek -b lineage-22.2 hardware/mediatek
+git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr -b lineage-22.2 device/mediatek/sepolicy_vndr
 echo "============================================================================================="
 echo "--------------------- All Repositrories Cloned Successfully -------------------"
 echo "============================================================================================="
