@@ -127,7 +127,14 @@ lunch lineage_a04e-bp1a-userdebug
 mka bacon
 
 # Making AOSP Recovery Image
-rm -rf device/samsung/a04e
+rm -rf device/samung/a04e
+rm -rf kernel/samsung/a04e
+rm -rf vendor/samsung/a04e
+rm -rf device/samsung/a04e-kernel
+rm -rf hardware/samsung
+rm -rf hardware/mediatek
+rm -rf device/mediatek/sepolicy_vndr
+rm -rf prebuilts/clang/host/linux-x86
 git clone https://github.com/xcitty2029x/twrp_device_samsung_a04e device/samsung/a04e
 # Resyncing
 /opt/crave/resync.sh
