@@ -126,21 +126,14 @@ source build/envsetup.sh
 lunch lineage_a04e-bp1a-userdebug
 mka bacon
 
-rm -rf kernel/samsung/a04e
-rm -rf vendor/samsung/a04e
-rm -rf device/samsung/a04e-kernel
-rm -rf hardware/samsung
-rm -rf hardware/mediatek
-rm -rf device/mediatek/sepolicy_vndr
-
+# Making Recovery IMAGE
 source build/envsetup.sh
-breakfast a04e userdebug || breakfast a04e || lunch lineage_a04e-eng || lunch lineage_a04e-userdebug
+breakfast a04e userdebug || lunch lineage_a04e-userdebug
 mka recoveryimage
 
 # Making AOSP Recovery Image
 rm -rf device/samung/a04e
 git clone https://github.com/xcitty2029x/twrp_device_samsung_a04e device/samsung/a04e
-/opt/crave/resync.sh
 source build/envsetup.sh
 breakfast a04e userdebug || breakfast a04e || lunch lineage_a04e-eng || lunch lineage_a04e-userdebug
 mka recoveryimage
