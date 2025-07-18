@@ -11,16 +11,16 @@ rm -rf device/mediatek/sepolicy_vndr
 rm -rf prebuilts/clang/host/linux-x86
 
 # Rom source repo
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 echo "========================================================================="
 echo "----------------------------- Repo init success ---------------------------"
 echo "========================================================================="
 
 # Device Specific trees
-git clone https://github.com/ZxroxXm/device_samsung_a04e -b lineage-22.2 device/samsung/a04e
-git clone https://github.com/ZxroxXm/vendor_samsung_a04e -b lineage-22.2 vendor/samsung/a04e
-git clone https://github.com/ZxroxXm/kernel_samsung_a04e -b lineage-22.2 kernel/samsung/a04e
-git clone https://github.com/ZxroxXm/device_samsung_a04e-kernel -b lineage-22.2 device/samsung/a04e-kernel
+git clone https://github.com/Galaxy-MTK-JDM/device_samsung_a04e -b lineage-22.2 device/samsung/a04e
+git clone https://github.com/Galaxy-MTK-JDM/vendor_samsung_a04e -b lineage-22.2 vendor/samsung/a04e
+git clone https://github.com/Galaxy-MTK-JDM/kernel_samsung_a04e -b lineage-22.2 kernel/samsung/a04e
+git clone https://github.com/Galaxy-MTK-JDM/device_samsung_a04e-kernel -b lineage-22.2 device/samsung/a04e-kernel
 git clone https://github.com/LineageOS/android_hardware_samsung -b lineage-22.2 hardware/samsung
 git clone https://github.com/LineageOS/android_hardware_mediatek -b lineage-22.2 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr -b lineage-22.2 device/mediatek/sepolicy_vndr
@@ -129,7 +129,7 @@ mka bacon
 rm -rf device/samsung/a04e
 git clone https://github.com/ZxroxXm/device_samsung_a04e -b test-org device/samsung/a04e
 source build/envsetup.sh
-lunch lineage_a04e-bp1a-userdebug
+lunch lineage_a04e-ap2a-userdebug
 mka bacon
 
 # Making Recovery IMAGE
