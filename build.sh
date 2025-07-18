@@ -17,7 +17,7 @@ echo "----------------------------- Repo init success --------------------------
 echo "========================================================================="
 
 # Device Specific trees
-git clone https://github.com/Galaxy-MTK-JDM/android_device_samsung_a04e -b lineage-22.2 device/samsung/a04e
+git clone https://github.com/Galaxy-MTK-JDM/android_device_samsung_a04e -b lineage-21 device/samsung/a04e
 git clone https://github.com/Galaxy-MTK-JDM/android_vendor_samsung_a04e -b lineage-22.2 vendor/samsung/a04e
 git clone https://github.com/Galaxy-MTK-JDM/android_kernel_samsung_a04e -b lineage-22.2 kernel/samsung/a04e
 git clone https://github.com/Galaxy-MTK-JDM/android_device_samsung_a04e-kernel -b lineage-22.2 device/samsung/a04e-kernel
