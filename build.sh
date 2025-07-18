@@ -11,7 +11,7 @@ rm -rf device/mediatek/sepolicy_vndr
 rm -rf prebuilts/clang/host/linux-x86
 
 # Rom source repo
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
 echo "========================================================================="
 echo "----------------------------- Repo init success ---------------------------"
 echo "========================================================================="
