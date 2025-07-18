@@ -17,10 +17,10 @@ echo "----------------------------- Repo init success --------------------------
 echo "========================================================================="
 
 # Device Specific trees
-git clone https://github.com/Galaxy-MTK-JDM/device_samsung_a04e -b lineage-22.2 device/samsung/a04e
-git clone https://github.com/Galaxy-MTK-JDM/vendor_samsung_a04e -b lineage-22.2 vendor/samsung/a04e
-git clone https://github.com/Galaxy-MTK-JDM/kernel_samsung_a04e -b lineage-22.2 kernel/samsung/a04e
-git clone https://github.com/Galaxy-MTK-JDM/device_samsung_a04e-kernel -b lineage-22.2 device/samsung/a04e-kernel
+git clone https://github.com/Galaxy-MTK-JDM/android_device_samsung_a04e -b lineage-22.2 device/samsung/a04e
+git clone https://github.com/Galaxy-MTK-JDM/android_vendor_samsung_a04e -b lineage-22.2 vendor/samsung/a04e
+git clone https://github.com/Galaxy-MTK-JDM/android_kernel_samsung_a04e -b lineage-22.2 kernel/samsung/a04e
+git clone https://github.com/Galaxy-MTK-JDM/android_device_samsung_a04e-kernel -b lineage-22.2 device/samsung/a04e-kernel
 git clone https://github.com/LineageOS/android_hardware_samsung -b lineage-22.2 hardware/samsung
 git clone https://github.com/LineageOS/android_hardware_mediatek -b lineage-22.2 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr -b lineage-22.2 device/mediatek/sepolicy_vndr
