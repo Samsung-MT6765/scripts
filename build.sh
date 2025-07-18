@@ -100,19 +100,56 @@ echo "------------------------------------------------"
 echo "Selinux Patching Done"
 echo "------------------------------------------------"
 
-#sysbta patch
+# Patches 
 
-wget https://raw.githubusercontent.com/ZxroxXm/patches/refs/heads/main/bt-15-qpr1.patch 
-wget https://raw.githubusercontent.com/ZxroxXm/patches/refs/heads/main/frame-1-15.patch
-wget https://raw.githubusercontent.com/ZxroxXm/patches/refs/heads/main/frame-2-15.patch
-wget https://raw.githubusercontent.com/ZxroxXm/patches/refs/heads/main/proc.patch
-wget https://raw.githubusercontent.com/ZxroxXm/patches/refs/heads/main/sms-15.patch
+echo "------------------------------------------------"
+echo "Cloning All the patches"
+echo "------------------------------------------------"
 
-git apply bt-15-qpr1.patch 
+
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/build/soong/0001-soong-add-vendor-niigo-priv-keys-to-allowlist.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/frameworks/av/0001-media-Import-codecs-omx-changes-from-t-alps-q0.mp1-V.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/frameworks/av/0002-media-Import-extractor-changes-from-t-alps-q0.mp1-V9.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/frameworks/av/0003-selene-media-libstagefright-Limit-max-width-height-t.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/frameworks/av/0004-Revert-mp3dec-Check-if-input-buffer-contains-valid-d.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/frameworks/base/0001-Restore-getSimStateForSlotIndex-in-SubscriptionManag.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/frameworks/base/0002-Replace-strings-with-strings.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/frameworks/base/0003-BootReceiver-Return-early-if-trace-pipe-doesnt-exists.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/frameworks/base/0004-core-jni-add-a-separate-prop-to-activate-ART-LowMemo.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/hardware/interfaces/0001-interfaces-kill-android.hardware.audio.sounddose-ven.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/packages/modules/Bluetooth/0001-gd-hci-Allow-disabling-erroneous-data-reporting.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/packages/modules/Bluetooth/0002-gd-hci-Ignore-unexpected-status-events.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/selinux/bt-15-qpr1.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/selinux/frame-1-15.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/selinux/frame-2-15.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/selinux/proc.patch
+wget https://raw.githubusercontent.com/Galaxy-MTK-JDM/android_device_samsung_a04e/refs/heads/lineage-21/patches/selinux/sms-15.patch
+
+echo "------------------------------------------------"
+echo "Cloning Done"
+echo "------------------------------------------------"
+
+git apply 0001-soong-add-vendor-niigo-priv-keys-to-allowlist.patch
+git apply 0001-media-Import-codecs-omx-changes-from-t-alps-q0.mp1-V.patch
+git apply 0002-media-Import-extractor-changes-from-t-alps-q0.mp1-V9.patch
+git apply 0003-selene-media-libstagefright-Limit-max-width-height-t.patch
+git apply 0004-Revert-mp3dec-Check-if-input-buffer-contains-valid-d.patch
+git apply 0001-Restore-getSimStateForSlotIndex-in-SubscriptionManag.patch
+git apply 0002-Replace-strings-with-strings.patch
+git apply 0003-BootReceiver-Return-early-if-trace-pipe-doesnt-exists.patch
+git apply 0004-core-jni-add-a-separate-prop-to-activate-ART-LowMemo.patch
+git apply 0001-interfaces-kill-android.hardware.audio.sounddose-ven.patch
+git apply 0001-gd-hci-Allow-disabling-erroneous-data-reporting.patch
+git apply 0002-gd-hci-Ignore-unexpected-status-events.patch
+git apply bt-15-qpr1.patch
 git apply frame-1-15.patch
 git apply frame-2-15.patch
 git apply proc.patch
 git apply sms-15.patch
+
+echo "------------------------------------------------"
+echo "Applying Patches done"
+echo "------------------------------------------------"
 
 # IMP
 rm -rf build/soong/fsgen
